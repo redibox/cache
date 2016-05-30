@@ -43,7 +43,7 @@ For example:
       // e.g when off `wrapPromise` will simply exec the passed promise
       // and bypass caching entirely
       //
-      // to turn this on/off dynamically then simply call RediBox.hooks.cache.bypass(boolean);
+      // to turn this on/off dynamically then simply call RediBox.hooks.cache.enabled(boolean);
       // or just get/set the value at `RediBox.hooks.cache.enabled`
       enabled: true,
 

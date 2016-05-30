@@ -4,6 +4,6 @@
 export default {
   enabled: true,
   defaultTTL: 6000,
-  keyPrefix: 'cache'
+  keyPrefix: 'cache',
 };
 

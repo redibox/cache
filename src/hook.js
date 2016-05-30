@@ -1,6 +1,6 @@
 import Promise from 'bluebird';
 import defaults from './defaults';
-import { BaseHook, noop, isFunction, tryJSONParse, tryJSONStringify } from 'redibox';
+import { BaseHook, tryJSONParse, tryJSONStringify } from 'redibox';
 
 export default class Cache extends BaseHook {
   constructor() {

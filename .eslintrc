@@ -5,7 +5,8 @@
   ],
   "rules": {
     "no-underscore-dangle": 0,
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "import/no-unresolved": 0
   },
   "globals": {
     "describe": true,

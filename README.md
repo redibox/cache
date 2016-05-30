@@ -1,3 +1,10 @@
+[![Coverage Status](https://coveralls.io/repos/github/redibox/cache/badge.svg?branch=master)](https://coveralls.io/github/redibox/cache?branch=master)
+![Downloads](https://img.shields.io/npm/dt/redibox-hook-cache.svg)
+[![npm version](https://img.shields.io/npm/v/redibox-hook-cache.svg)](https://www.npmjs.com/package/redibox-hook-cache)
+[![dependencies](https://img.shields.io/david/redibox/cache.svg)](https://david-dm.org/redibox/cache)
+[![build](https://travis-ci.org/redibox/cache.svg)](https://travis-ci.org/redibox/cache)
+[![License](https://img.shields.io/npm/l/redibox-hook-cache.svg)](/LICENSE)
+
 ## RediBox Cache
 
 Caching data via redis is a common usage for redis.

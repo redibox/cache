@@ -23,7 +23,7 @@ export default class Cache extends BaseHook {
    * @returns {string}
    */
   toKey(key = '') {
-    return `${this.options.keyPrefix}:${key}`;
+    return `${this.options.keyPrefix}${key}`;
   }
 
   /**

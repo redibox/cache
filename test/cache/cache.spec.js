@@ -43,7 +43,6 @@ describe('cache hook', () => {
       });
   });
 
-
   it('Should cache wrap waterline query promises', () => {
     const fakeWaterline = Promise.resolve('hello2');
     fakeWaterline._criteria = { chickens: true };
@@ -186,7 +185,6 @@ describe('cache hook', () => {
       });
     });
   });
-
 
   it('Should list all cached items', () => {
     return Promise.all([

@@ -151,7 +151,7 @@ export default class Cache extends BaseHook {
     }).then(value =>
       Promise.all([
         Promise.resolve(value),
-        foundCache && value ? this.set(key, value, ttl) : Promise.resolve(),
+        !foundCache && value ? this.set(key, value, ttl) : Promise.resolve(),
       ])
     ).then(results => results[0]);
   }

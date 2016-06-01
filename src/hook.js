@@ -18,6 +18,25 @@ export default class Cache extends BaseHook {
   }
 
   /**
+   * Cleanup prefixes
+   */
+  initialize() {
+    if (this.options.keyPrefix && this.options.keyPrefix.charAt(0) !== ':') {
+      /* eslint max-len: 0 */
+      if (this.core.options.redis.keyPrefix && this.core.options.redis.keyPrefix.charAt(this.core.options.redis.keyPrefix.length - 1) !== ':') {
+        this.options.keyPrefix = `:${this.options.keyPrefix}`;
+      }
+    }
+
+    /* eslint max-len: 0 */
+    if (this.options.keyPrefix && this.options.keyPrefix.charAt(this.options.keyPrefix.length - 1) !== ':') {
+      this.options.keyPrefix = `${this.options.keyPrefix}:`;
+    }
+
+    return Promise.resolve();
+  }
+
+  /**
    * Converts the users key to the full redis key with module prefix.
    * @param key
    * @returns {string}

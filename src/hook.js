@@ -1,6 +1,6 @@
 import Promise from 'bluebird';
 import defaults from './defaults';
-import { BaseHook, tryJSONParse, tryJSONStringify } from 'redibox';
+import { BaseHook, tryJSONParse, tryJSONStringify, isObject } from 'redibox';
 
 export default class Cache extends BaseHook {
   constructor() {
@@ -74,6 +74,9 @@ export default class Cache extends BaseHook {
     }
 
     if (typeof val !== 'string' && typeof val !== 'number') {
+      if (isObject(val) && val.toObject) {
+        val = val.toObject();
+      }
       val = tryJSONStringify(val);
     }
 

@@ -154,14 +154,14 @@ export default class Cache extends BaseHook {
     }
 
     if (skipCache || !this.options.enabled) {
-      return promise;
+      return promise.then ? promise : promise();
     }
 
     if (!this.core.isClientConnected(this.client)) {
       this.log.warn(
         'Redis server not connected or is not in a ready state, temporarily bypassing cache...'
       );
-      return promise;
+      return promise.then ? promise : promise();
     }
 
     let foundCache = false;
@@ -170,7 +170,7 @@ export default class Cache extends BaseHook {
         foundCache = true;
         return value;
       }
-      return promise;
+      return promise.then ? promise : promise();
     }).then(value =>
       Promise.all([
         Promise.resolve(value),

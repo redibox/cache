@@ -95,6 +95,10 @@ export default class Cache extends BaseHook {
     if (typeof val !== 'string' && typeof val !== 'number') {
       if (isObject(val) && val.toObject) {
         val = val.toObject();
+      } else if (Array.isArray(val) && val.length && isObject(val[0]) && val[0].toObject) {
+        for (let i = 0, iLen = val.length; i < iLen; i++) {
+          val[i] = isObject(val[i]) && val[i].toObject ? val[i].toObject() : val[i];
+        }
       }
       val = tryJSONStringify(val);
     }

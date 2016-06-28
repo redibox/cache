@@ -85,6 +85,7 @@ And now for the goodies! To save yourself repeating the logical steps mentioned 
 
 ##### RediBox.hooks.cache.wrapPromise(key: string, promise: Promise, [Optional] ttl, [Optional] skipCache: boolean): Promise
  - Wraps a promise for the purposes of caching a successful resolve.
+ - A function can also be passed that when called returns a promise - mainly for deferring chained promises.
 
 Usage example:
 ```javascript

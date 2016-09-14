@@ -26,7 +26,7 @@ const deferred = () => {
   return new Promise(resolve => { 
     // Simulate a long async task
     setTimeout(() => {
-      return ('some mocked api data');
+      return resolve('some mocked api data');
     }, 3000);
   });
 };

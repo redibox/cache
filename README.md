@@ -76,7 +76,7 @@ RediBox.hooks.cache.clear('cat:fluffy:*').then(data => {
 
 ### Advanced Usage
 
-- Advanced API options
-- Handling Promises
-- Usage with the Waterline ORM
-- Handling cache key names
+- [Full API Usages]()
+- [Handling Promises]()
+- [Usage with the Waterline ORM]()
+- [Handling cache key names]()

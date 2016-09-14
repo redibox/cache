@@ -21,7 +21,7 @@ How long the item will be stored in Redis.
 > The key thing to remember with this is to always return a deferred promise, otherwise it'll still execute the promise
 each time as in in-line function.
 
-```
+```javascript
 const deferred = () => {
   return new Promise(resolve => { 
     // Simulate a long async task
@@ -43,7 +43,7 @@ In this example, the deferred promise will only execute once per 2 minutes.
 
 Functions which also return a promise, such as database queries using the Waterline ORM can be passed in directly, which has the same effect:
 
-```
+```javascript
 const deferred = () => {
   return User.find();
 };

@@ -69,7 +69,7 @@ RediBox.hooks.cache.clear().then(data => {
 });
 
 // Delete all matching wildcard items in cache
-RediBox.hooks.cache.clear('cat:flufy:*').then(data => {
+RediBox.hooks.cache.clear('cat:fluffy:*').then(data => {
   console.log('Clear wildcard data from cache');
 });
 ```

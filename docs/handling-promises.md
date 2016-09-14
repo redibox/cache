@@ -40,3 +40,18 @@ return Cache
 ```
 
 In this example, the deferred promise will only execute once per 2 minutes.
+
+Functions which also return a promise, such as database queries using the Waterline ORM can be passed in directly, which has the same effect:
+
+```
+const deferred = () => {
+  return User.find();
+};
+
+return Cache
+  .wrapPromise(
+    'external-api-data',
+    deferred,
+    120
+  );
+```

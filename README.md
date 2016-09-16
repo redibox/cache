@@ -76,10 +76,10 @@ RediBox.hooks.cache.clear('cat:fluffy:*').then(data => {
 
 ### Advanced Usage
 
-- [Full API Usages](https://github.com/redibox/cache/blob/master/docs/api.md)
-- [Handling Async](https://github.com/redibox/cache/blob/master/docs/handling-async.md)
-- [Usage with the Waterline ORM](https://github.com/redibox/cache/blob/master/docs/waterline.md)
-- [Key naming](https://github.com/redibox/cache/blob/master/docs/key-naming.md)
+- [API](https://github.com/redibox/cache/blob/master/docs/api.md)
+- [Caching Async Data](https://github.com/redibox/cache/blob/master/docs/caching-async-data.md)
+- [Using with Waterline ORM](https://github.com/redibox/cache/blob/master/docs/waterline.md)
+- [Cache Key Names](https://github.com/redibox/cache/blob/master/docs/key-naming.md)
 
 ### License
 

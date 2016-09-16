@@ -9,7 +9,7 @@ Returns a specific cache item by key.
 - key [String]
   - required: `true`
   
-```
+```javascript
 RediBox.hooks.cache
   .get('cat')
   .then(data => {
@@ -32,7 +32,7 @@ Adds a new cache item by key name.
   - default: `60`
 The time this particular item will be stored in the cache, in seconds.
 
-```
+```javascript
 RediBox.hooks.cache
   .set('cat:fluffy', 'https://pbs.twimg.com/media/CYY44mYWMAATghb.jpg:small', 120)
   .then(() => {
@@ -47,7 +47,7 @@ Deletes a specific cache item by key.
 - key [String]
   - required: `true`
   
-```
+```javascript
 RediBox.hooks.cache
   .get('cat')
   .then(data => {
@@ -64,7 +64,7 @@ Removes all, a specific, or a wildcard amount of items from the cache by key.
 If empty, will remove all cached items. To wildcard a filter, append a `*` onto the key.
 
 
-```
+```javascript
 // Delete all items in cache
 RediBox.hooks.cache
   .clear()
@@ -100,7 +100,7 @@ The time this particular item will be stored in the cache, in seconds.
   - default: `false`
 If `true`, the cache will be completley ignored.
 
-```
+```javascript
 const deferred = () => {
   return User.find();
 };

@@ -121,3 +121,20 @@ Caches a Waterline ORM query. The key is created automatically based on the mode
 - query [Promise/Waterline]
   - required: `true`
   
+- ttl [Number]
+  - required: `false`
+  - default: `60`
+The time this particular item will be stored in the cache, in seconds.
+
+- skipCache [Bool]
+  - required: `false`
+  - default: `false`
+If `true`, the cache will be completley ignored.
+  
+```javascript
+return Cache
+  .wrapWaterline(
+    User.find(),
+    120,
+  );
+```
